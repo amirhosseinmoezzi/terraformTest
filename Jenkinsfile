@@ -5,7 +5,7 @@ pipeline {
 	stage('Stage 1') {
 		steps {
 			script {
-				sh "hostname"
+				sh "hostname && date"
 			}
 		}
 	}
