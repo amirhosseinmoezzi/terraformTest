@@ -4,7 +4,7 @@ node {
 
     try {
         stage ('Clone') {
-        	checkout scm
+        	git branch: 'tt', credentialsId: 'GithubUsername', url: 'https://github.com/amirhosseinmoezzi/terraformTest.git'
         }
         stage ('Build') {
         	sh "echo 'shell scripts to build project...'"
