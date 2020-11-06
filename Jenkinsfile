@@ -1,10 +1,11 @@
 pipeline {
-   agent any
+   agent { label 'slave' }
    stages {
       stage('test') {
-         sh """
-            echo \${PWD}
-         """
+		script {
+			sh """
+				hostname
+			"""
       }
    }
 }
