@@ -6,6 +6,7 @@ pipeline {
 			sh """
 				hostname
 			"""
+		}
       }
    }
 }
