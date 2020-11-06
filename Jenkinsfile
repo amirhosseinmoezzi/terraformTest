@@ -1,11 +1,11 @@
 pipeline {
-  agent { label 'slave' }
+  agent any
   options { skipDefaultCheckout true }
-    stage('Stage 1') {
-      steps {
-        script {
+  stage('Stage 1') {
+	steps {
+		script {
           echo 'running stage'
         }
-      }
     }
+ }
 }
