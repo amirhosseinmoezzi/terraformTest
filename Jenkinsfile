@@ -1,22 +1,10 @@
 pipeline {
-  agent any
-  stages {
-
+  agent { label 'slave' }
     stage('Stage 1') {
       steps {
+		git branch 'tt'
         script {
-          echo 'Stage 1'
+          echo 'running stage'
         }
       }
     }
-
-    stage('Stage 2') {
-      steps {
-        script {
-          echo 'Stage 2'
-        }
-      }
-    }
-
-  }
-}
