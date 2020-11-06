@@ -1,11 +1,11 @@
 pipeline {
-  agent any
+  agent { label "slave"
   options { skipDefaultCheckout true }
   stages {
 	stage('Stage 1') {
 		steps {
 			script {
-			echo 'running stage'
+			hostname
 			}
 		}
 	}
