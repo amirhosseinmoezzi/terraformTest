@@ -1,8 +1,8 @@
 pipeline {
   agent { label 'slave' }
+  options { skipDefaultCheckout true }
     stage('Stage 1') {
       steps {
-		git branch 'tt'
         script {
           echo 'running stage'
         }
