@@ -2,10 +2,12 @@ pipeline {
    agent { label 'slave' }
    stages {
       stage('test') {
-		script {
-			sh """
-				hostname
-			"""
+		steps {
+			script {
+				sh """
+					hostname
+				"""
+			}
 		}
       }
    }
