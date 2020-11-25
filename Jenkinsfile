@@ -1,6 +1,9 @@
 pipeline {
   agent {
-    label 'slave'
+    node {
+      label 'Linux'
+    }
+
   }
   stages {
     stage('Stage 1') {
@@ -18,6 +21,23 @@ pipeline {
         stage('Stage 2') {
           steps {
             sh 'time'
+          }
+        }
+
+      }
+    }
+
+    stage('deploy') {
+      parallel {
+        stage('deploy') {
+          steps {
+            echo 'going to deploy'
+          }
+        }
+
+        stage('stage2 of deploy') {
+          steps {
+            sh 'echo "deploying ..... "'
           }
         }
 
