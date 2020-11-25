@@ -37,7 +37,8 @@ pipeline {
 
         stage('stage2 of deploy') {
           steps {
-            sh 'echo "deploying ..... "'
+            sh '''echo "deploying on $hostname ..... "
+'''
           }
         }
 
