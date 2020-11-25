@@ -17,7 +17,7 @@ pipeline {
 
         stage('Stage 2') {
           steps {
-            sh 'sh "time"'
+            sh 'time'
           }
         }
 
